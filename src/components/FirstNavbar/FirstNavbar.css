@@ -1,0 +1,44 @@
+.FirstNav {
+   background-color: black;
+  
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .icon-apple {
+    width: 3rem !important;
+   height: 4rem !important; 
+    color: white;
+  }
+  
+  .cart-container {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    
+    
+  }
+
+  
+.icon-cart{
+  width: 3rem !important;
+  height: 4rem !important; 
+    color: white;
+    margin-top: 0.2rem;
+   
+    
+
+    
+}
+
+.hardcoded-number{
+    color: white;
+    
+}
+

@@ -1,13 +1,10 @@
 import React from "react";
 import "./Navbar.css";
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-import CartWidget from "../CartWidget/CartWidget"
-
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
-     
       <nav className="navbar navbar-expand-lg navbar-bs">
         <div className="container-fluid  ">
           <a className="navbar-brand" href="#"></a>
@@ -25,29 +22,25 @@ const Navbar = () => {
           <div className="collapse navbar-collapse " id="navbarNav">
             <ul className="navbar-nav ">
               <li className="nav-item ">
-              <a className="nav-link" href="#">
-                <MenuBookIcon className="icon-book" />
+                <a className="nav-link navbar-list" href="#">
+                  <Link to={"/"} className="navbar-list">
+                    Apple store
+                  </Link>
                 </a>
               </li>
               <li className="nav-item ">
                 <a className="nav-link navbar-list" href="#">
-                  Book Store
+                  <Link to={"/Products"} className="navbar-list">
+                    {" "}
+                    Productos
+                  </Link>
                 </a>
               </li>
               <li className="nav-item ">
                 <a className="nav-link navbar-list" href="#">
-                  Products
-                </a>
-              </li>
-              <li className="nav-item ">
-                <a className="nav-link navbar-list" aria-disabled="true">
-                  About us
-                </a>
-              </li>
-              <li className="nav-item ">
-                <a className="nav-link" aria-disabled="true">
-                  <CartWidget/>
-                  <span className="hardcoded-number">1</span>
+                  <Link to={"/Contact"} className="navbar-list">
+                    Contacto
+                  </Link>
                 </a>
               </li>
             </ul>

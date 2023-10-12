@@ -1,0 +1,24 @@
+.card-productos{
+width: 350px;
+
+
+}
+
+
+.boton-productos{
+    background-color: black;
+    color: white;
+    height: 40px;
+    border-radius: 0.5rem;
+    padding-left: 10px;
+    padding-right: 10px;
+   
+
+}
+
+.boton-productos:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+   
+    
+}

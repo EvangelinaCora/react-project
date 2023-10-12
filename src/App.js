@@ -1,29 +1,41 @@
-import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Main from './components/Main/MainContainer';
-import book2 from './img/book-2.jpg'
-import book3 from './img/book-3.jpg'
-
-
-
-function App() {
-  return (
-    <>
-  <Navbar />
-  <ItemListContainer 
-  img={book3}
-  title="Jane Austen collection"
+import "./App.css";
+import {
   
-  />
-  <ItemListContainer
-  img={book2}
-  title="It ends with us"
-  />
-  <Main/>
-    </>
+  BrowserRouter as Router,
+  Routes,
+  Route,
+ 
+} from "react-router-dom";
 
+// components
+import Navbar from "./components/Navbar/Navbar";
+import FirstNavbar from "./components/FirstNavbar/FirstNavbar";
+import Footer from "./components/footer/footer";
+
+// pages
+import Home from "./pages/Home/Home";
+import Products from "./pages/Products/Products";
+import Contact from "./pages/Contact/Contact";
+import { ProductPage } from "./pages/ProductPage";
+import { CategoryPage } from "./pages/Category/CategoryPage";
+
+const App = () => {
+  return (
+    <Router>
+      <FirstNavbar />
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/category/:categoryId" element={<CategoryPage />} />
+        <Route path="/product/:productId" element={<ProductPage />} />
+      </Routes>
+
+      <Footer />
+    </Router>
   );
-}
+};
 
 export default App;

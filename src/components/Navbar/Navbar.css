@@ -1,37 +1,28 @@
 .navbar-bs{
-    background-color: rgba(4, 10, 67, 0.924);
+    background-color: white;
+    padding: 0%;
+  
+    
+  
 }
 
 .navbar-list{
-color: white;
+color: black;
 font-size: 1.3rem;
+text-decoration: none;
+
 
 }
 
 .navbar-list:hover{
-    color: rgb(76, 12, 237);
+  text-decoration: underline;
    
  }
 
 .button-responsive {
-    background-color:   rgba(6, 12, 74, 0.924); 
+    background-color: white; 
     
 }
 
-.icon-book{
-    color: white;
-    margin-top: 0.2rem;
- 
-}
 
-.icon-book:hover{
-    color:rgb(76, 12, 237);
-}
 
-.hardcoded-number{
-    color: white;
-}
-
-.hardcoded-number:hover{
-    color: rgb(76, 12, 237);
-}
