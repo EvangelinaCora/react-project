@@ -1,9 +1,14 @@
 .card-productos{
 width: 350px;
-
-
+height: 100%;
+box-shadow: 6px 13px 61px -30px rgba(0,0,0,0.75);
+-webkit-box-shadow: 6px 13px 61px -30px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 13px 61px -30px rgba(0,0,0,0.75);
 }
 
+.card-img{
+    width: 80%;
+}
 
 .boton-productos{
     background-color: black;

@@ -3,6 +3,7 @@ import "./ProductCard.css";
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ producto }) => {
+  console.log(producto);
     return (
       <Link style={{textDecoration:"none"}} to={`/product/${producto.id}`}>
         <div className="card card-productos">
@@ -13,7 +14,7 @@ const ProductCard = ({ producto }) => {
           />
           <div className="card-body">
             <h5 className="card-title">{producto.name}</h5>
-            <p className="card-text">{producto.price}</p>
+            <p className="card-text">${producto.price}</p>
             <button className=" boton-productos">Agregar al carrito</button>
           </div>
         </div>

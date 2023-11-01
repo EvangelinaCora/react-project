@@ -1,0 +1,36 @@
+.card-producto{
+
+}
+
+.titulo-producto{
+
+}
+
+.precio-producto{
+
+}
+
+.img-producto{
+width: 80%;
+
+}
+
+.descripcion-producto{
+
+}
+
+.boton-producto{
+
+}
+
+.productPage{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 2rem;
+}
+
+.data{
+margin-top: 5rem;
+}

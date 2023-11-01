@@ -5,20 +5,24 @@ import { Link } from "react-router-dom";
 // Componentes
 import ProductCard from "../../components/ProductCard/ProductCard";
 
+import { db } from "../../firebase/firebaseConfig";
+import { collection, query, getDocs } from "firebase/firestore";
+
 const Products = () => {
   const [productos, setProductos] = useState([]);
-  const newProducts = productos.filter((producto) => {
-    return producto.category === "new";
-  });
-
-  const oldProducts = productos.filter((producto) => {
-    return producto.category === "old";
-  });
 
   useEffect(() => {
-    axios("https://sc-api-iphones.onrender.com/").then((resp) => {
-      setProductos(resp.data);
-    });
+    const getProducts = async () => {
+      const q = query(collection(db, "products"));
+      const docs = [];
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        docs.push({ ...doc.data(), id: doc.id });
+      });
+      // console.log(docs);
+      setProductos(docs);
+    };
+    getProducts();
   }, []);
 
   const ulStyle = {
@@ -29,27 +33,8 @@ const Products = () => {
     marginTop: "2rem",
   };
 
-  const linkStyle = {
-    listStyle:"none",
-     color: "black",
-    textDecoration:"none",
-    fontSize: "1.5rem",
-    display: "flex",
-    justifyContent: "space-around",
-  };
   return (
     <>
-      <ul style={linkStyle}>
-        <li>
-        <Link style={linkStyle} to={"/category/new"}>Modelos actuales</Link>
-        </li>
-
-        <li>
-        <Link style={linkStyle} to={"/category/old"}>Modelos antiguos</Link>
-        </li>
-        
-        
-      </ul>
       <ul style={ulStyle}>
         {productos.map((producto) => {
           return <ProductCard key={producto.id} producto={producto} />;

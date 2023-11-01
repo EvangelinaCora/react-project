@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import Menu from "../menu/menu";
 
 const Navbar = () => {
   return (
@@ -22,26 +23,20 @@ const Navbar = () => {
           <div className="collapse navbar-collapse " id="navbarNav">
             <ul className="navbar-nav ">
               <li className="nav-item ">
-                <a className="nav-link navbar-list" href="#">
-                  <Link to={"/"} className="navbar-list">
-                    Apple store
-                  </Link>
-                </a>
+                <Link className="nav-link navbar-list" to={"/"}>
+                  APPLE STORE
+                </Link>
               </li>
               <li className="nav-item ">
-                <a className="nav-link navbar-list" href="#">
-                  <Link to={"/Products"} className="navbar-list">
-                    {" "}
-                    Productos
-                  </Link>
-                </a>
+                <Link to={"/products"}>
+                  {" "}
+                  <Menu className="navbar-menu" />
+                </Link>
               </li>
               <li className="nav-item ">
-                <a className="nav-link navbar-list" href="#">
-                  <Link to={"/Contact"} className="navbar-list">
-                    Contacto
-                  </Link>
-                </a>
+                <Link className="nav-link navbar-list" to={"/contact"}>
+                  CONTACTO
+                </Link>
               </li>
             </ul>
           </div>
