@@ -18,9 +18,7 @@ export default function FadeMenu() {
   const menuStyle = {
     color: "black",
     fontSize: "1.1rem",
-    fontfamily: 'Verdana',
-   
-   
+    fontfamily: "Verdana",
   };
 
   const linkStyle = {
@@ -39,7 +37,12 @@ export default function FadeMenu() {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        style={{...menuStyle,fontSize:"1.4rem",padding:"0",margin:"0.3rem 0.2rem 0"}}
+        style={{
+          ...menuStyle,
+          fontSize: "1.4rem",
+          padding: "0",
+          margin: "0.3rem 0.2rem 0",
+        }}
       >
         Productos
       </Button>
@@ -54,13 +57,13 @@ export default function FadeMenu() {
         TransitionComponent={Fade}
       >
         <MenuItem onClick={handleClose}>
-          <Link style={linkStyle} to={"/category/old"}>
-            Modelos antiguos
+          <Link style={linkStyle} to={"/category/new"}>
+            Modelos actuales
           </Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link style={linkStyle} to={"/category/new"}>
-            Modelos actuales
+          <Link style={linkStyle} to={"/category/old"}>
+            Modelos antiguos
           </Link>
         </MenuItem>
       </Menu>

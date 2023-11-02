@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
-
-// Imagenes
+// Img
 import ImgIphone15 from "./img/iphone15.png";
 import ImgAirpods from "./img/airpods.png";
 

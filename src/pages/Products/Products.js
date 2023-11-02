@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
-
-// Componentes
 import ProductCard from "../../components/ProductCard/ProductCard";
-
 import { db } from "../../firebase/firebaseConfig";
 import { collection, query, getDocs } from "firebase/firestore";
 

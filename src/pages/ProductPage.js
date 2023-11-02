@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./Products/ProductPage.css";
 import { useParams } from "react-router-dom";
@@ -10,7 +9,6 @@ import {
   where,
   documentId,
 } from "firebase/firestore";
-import ProductCard from "../components/ProductCard/ProductCard";
 
 export const ProductPage = () => {
   const [product, setProduct] = useState([]);
@@ -38,11 +36,11 @@ export const ProductPage = () => {
     <div>
       {product.map((data) => (
         <div className="productPage">
-            <img
-              className="card-img-top card-img img-producto"
-              src={data.img}
-              alt="Card image cap"
-            />
+          <img
+            className="card-img-top card-img img-producto"
+            src={data.img}
+            alt="Card image cap"
+          />
           <div className="data">
             <h5 className="card-title">{data.name}</h5>
             <p className="card-text">${data.price}</p>
