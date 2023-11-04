@@ -1,25 +1,15 @@
-.navbar-bs{
-    background-color: white;
-    padding: 0%;
-  
-    
-  
+.navbar-bs {
+  background-color: white;
+  padding: 0%;
 }
 
-.navbar-list{
-color: black;
-font-size: 1.3rem;
-text-decoration: none;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-
+.navbar-list {
+  color: black;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
 
 .button-responsive {
-    background-color: white; 
-    
+  background-color: white;
 }
-
-

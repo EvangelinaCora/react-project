@@ -2,18 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../Category/CategoryPage.css";
 import { db } from "../../firebase/firebaseConfig";
-import {
-  collection,
-  query,
-  getDocs,
-  where,
-} from "firebase/firestore";
+import { collection, query, getDocs, where } from "firebase/firestore";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
 export const CategoryPage = () => {
   const [productsData, setProductsData] = useState([]);
   const { categoryId } = useParams();
-
 
   useEffect(() => {
     const getProducts = async () => {
@@ -32,18 +26,10 @@ export const CategoryPage = () => {
     getProducts();
   }, [categoryId]);
 
-  const ulStyle = {
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gridGap: "10px",
-    gridAutoRows: "minmax(100px, auto)",
-    marginTop: "3rem",
-  };
-
   return (
     <>
       <div className="categoryPage">
-        <ul style={ulStyle}>
+        <ul className="products-list">
           {productsData.map((producto) => {
             return <ProductCard key={producto.id} producto={producto} />;
           })}

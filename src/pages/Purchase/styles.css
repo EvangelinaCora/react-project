@@ -1,0 +1,64 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 3rem;
+}
+
+form input {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+
+.confirm-btn {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px;
+  font-family: inherit;
+  margin-top: 1rem;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  outline: none;
+  position: relative;
+  width: 300px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.disabled {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 10px;
+  font-family: inherit;
+  margin-top: 1rem;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  outline: none;
+  position: relative;
+  width: 300px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: gray;
+  cursor: not-allowed !important;
+}
+
+@media (max-width: 700px) {
+  form {
+    width: 60%;
+ 
+  }
+}

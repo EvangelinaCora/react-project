@@ -10,25 +10,32 @@ import Footer from "./components/footer/footer";
 import Home from "./pages/Home/Home";
 import Products from "./pages/Products/Products";
 import Contact from "./pages/Contact/Contact";
-import { ProductPage } from "./pages/ProductPage";
 import { CategoryPage } from "./pages/Category/CategoryPage";
+import { CartProvider } from "./context/CartProvider";
+import { CartPage } from "./pages/Cart/CartPage";
+import { PurchasePage } from "./pages/Purchase/PurchasePage";
+import { ProductPage } from "./pages/ProductDetail/ProductPage";
 
 const App = () => {
   return (
-    <Router>
-      <FirstNavbar />
-      <Navbar />
+    <CartProvider>
+      <Router>
+        <FirstNavbar />
+        <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/category/:categoryId" element={<CategoryPage />} />
-        <Route path="/product/:productId" element={<ProductPage />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/category/:categoryId" element={<CategoryPage />} />
+          <Route path="/product/:productId" element={<ProductPage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/purchase" element={<PurchasePage />} />
+        </Routes>
 
-      <Footer />
-    </Router>
+        <Footer />
+      </Router>
+    </CartProvider>
   );
 };
 

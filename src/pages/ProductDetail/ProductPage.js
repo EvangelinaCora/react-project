@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import "./Products/ProductPage.css";
+import React, { useContext, useEffect, useState } from "react";
+import "./ProductPage.css";
 import { useParams } from "react-router-dom";
-import { db } from "../firebase/firebaseConfig";
+import { db } from "../../firebase/firebaseConfig";
 import {
   collection,
   query,
@@ -9,12 +9,17 @@ import {
   where,
   documentId,
 } from "firebase/firestore";
+import { CartContext } from "../../context/CartContext";
 
 export const ProductPage = () => {
   const [product, setProduct] = useState([]);
+  const { addToCart } = useContext(CartContext);
 
   const { productId } = useParams();
-  console.log(productId);
+
+  const addProductToCart = () => {
+    addToCart(product[0]);
+  };
 
   useEffect(() => {
     const getProducts = async () => {
@@ -35,7 +40,7 @@ export const ProductPage = () => {
   return (
     <div>
       {product.map((data) => (
-        <div className="productPage">
+        <div key={data.id} className="productPage">
           <img
             className="card-img-top card-img img-producto"
             src={data.img}
@@ -44,8 +49,10 @@ export const ProductPage = () => {
           <div className="data">
             <h5 className="card-title">{data.name}</h5>
             <p className="card-text">${data.price}</p>
-            <p className="card-text">{data.description}</p>
-            <button className=" boton-productos">Agregar al carrito</button>
+            <p className="card-description">{data.description}</p>
+            <button className=" boton-productos" onClick={addProductToCart}>
+              Agregar al carrito
+            </button>
           </div>
         </div>
       ))}

@@ -5,7 +5,11 @@ const Contact = () => {
   return (
     <>
       <div className="contacto">
-        <h1 className="h1-contacto">Contacta a Apple</h1>
+        <div className="div-contacta">
+          <h1 className="h1-contacto content flex animate__animated animate__bounceInRight">
+            Informacion
+          </h1>
+        </div>
 
         <div
           className="accordion accordion-flush contacto-acordion"
@@ -21,7 +25,7 @@ const Contact = () => {
                 aria-expanded="false"
                 aria-controls="flush-collapseOne"
               >
-                Cómo encontrar distribuidores autorizados?
+                Numero telefonico
               </button>
             </h2>
             <div
@@ -32,8 +36,7 @@ const Contact = () => {
             >
               <div className="accordion-body contacto-acordion-texto">
                 {" "}
-                Visita nuestro Localizador de Distribuidores para encontrar un
-                distribuidor autorizado de Apple en Argentina
+                11 2201 2004
               </div>
             </div>
           </div>
@@ -47,7 +50,7 @@ const Contact = () => {
                 aria-expanded="false"
                 aria-controls="flush-collapseTwo"
               >
-                Cómo encontrar proveedores de servicio autorizados?
+                Direccion del local
               </button>
             </h2>
             <div
@@ -58,9 +61,7 @@ const Contact = () => {
             >
               <div className="accordion-body contacto-acordion-texto">
                 {" "}
-                Visita nuestro Localizador de Proveedores de Servicio para
-                encontrar un proveedor de servicio autorizado de Apple en
-                Argentina
+                Av. de mayo 360 - Ramos Mejia
               </div>
             </div>
           </div>
@@ -74,7 +75,7 @@ const Contact = () => {
                 aria-expanded="false"
                 aria-controls="flush-collapseThree"
               >
-                Opciones de soporte en línea
+                Direccion de correo electronico
               </button>
             </h2>
             <div
@@ -84,10 +85,7 @@ const Contact = () => {
               data-bs-parent="#accordionFlushExample"
             >
               <div className="accordion-body contacto-acordion-texto">
-                La Base de Conocimientos es la nueva base de datos de soporte de
-                Apple que contiene información técnica actualizada y reciente
-                sobre productos, descargas de software, consejos para resolver
-                problemas y artículos de apoyo.
+                AppleStoreArgentina@gmail.com
               </div>
             </div>
           </div>
@@ -102,7 +100,7 @@ const Contact = () => {
                 aria-expanded="false"
                 aria-controls="flush-collapseFour"
               >
-                A que numero podes llamar?
+                Hacen cambios?
               </button>
             </h2>
             <div
@@ -113,7 +111,8 @@ const Contact = () => {
             >
               <div className="accordion-body contacto-acordion-texto">
                 {" "}
-                Podes contactarnos al 11 2201 2004{" "}
+                Tu dispositivo cuenta con una garantia de un año para que puedas
+                cambiarlo ante cualquier inconveniente{" "}
               </div>
             </div>
           </div>
@@ -128,7 +127,7 @@ const Contact = () => {
                 aria-expanded="false"
                 aria-controls="flush-collapseFive"
               >
-                Donde puedo encontrar una sucursal?
+                Aceptan efectivo en pesos?
               </button>
             </h2>
             <div
@@ -139,7 +138,59 @@ const Contact = () => {
             >
               <div className="accordion-body contacto-acordion-texto">
                 {" "}
-                Av. Córdoba 456 PB – CABA{" "}
+                No, por el momento solo nos manejamos con pesos{" "}
+              </div>
+            </div>
+          </div>
+
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="flush-headingSix">
+              <button
+                className="accordion-button collapsed contacto-acordion-texto"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseSix"
+                aria-expanded="false"
+                aria-controls="flush-collapseSix"
+              >
+                Cuales son las formas de pago?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseSix"
+              className="accordion-collapse collapse"
+              aria-labelledby="flush-headingSix"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div className="accordion-body contacto-acordion-texto">
+                {" "}
+                Podes abonar en efectivo, tarjeta de credito o debito, y
+                transferencia{" "}
+              </div>
+            </div>
+          </div>
+
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="flush-headingSeven">
+              <button
+                className="accordion-button collapsed contacto-acordion-texto"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseSeven"
+                aria-expanded="false"
+                aria-controls="flush-collapseSeven"
+              >
+                Que cuotas hay disponibles?
+              </button>
+            </h2>
+            <div
+              id="flush-collapseSeven"
+              className="accordion-collapse collapse"
+              aria-labelledby="flush-headingSeven"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div className="accordion-body contacto-acordion-texto">
+                Podés pagar hasta en 6 cuotas sin interés
               </div>
             </div>
           </div>
