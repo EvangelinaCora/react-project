@@ -36,11 +36,11 @@
 }
 
 .contacto {
-  height: 100vh;
+  height: 140vh;
 }
 
 @media (max-width: 767px) {
   .contacto {
-    height: 130vh;
+    height: 150vh;
   }
 }

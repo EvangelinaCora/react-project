@@ -10,6 +10,8 @@ import {
   documentId,
 } from "firebase/firestore";
 import { CartContext } from "../../context/CartContext";
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
 
 export const ProductPage = () => {
   const [product, setProduct] = useState([]);
@@ -19,6 +21,11 @@ export const ProductPage = () => {
 
   const addProductToCart = () => {
     addToCart(product[0]);
+    Toastify({
+      text: `Tu producto se agrego al carrito`,
+      duration: 3000,
+      backgroundColor: "#A8DF8E",
+    }).showToast();
   };
 
   useEffect(() => {

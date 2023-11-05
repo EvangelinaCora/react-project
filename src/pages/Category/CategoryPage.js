@@ -28,7 +28,7 @@ export const CategoryPage = () => {
 
   return (
     <>
-      <div className={"categoryPage" + (categoryId === "old" ? "old" : "")}>
+      <div className="categoryPage">
         <ul className="products-list">
           {productsData.map((producto) => {
             return <ProductCard key={producto.id} producto={producto} />;
