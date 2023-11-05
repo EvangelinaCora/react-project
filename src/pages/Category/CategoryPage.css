@@ -5,6 +5,10 @@
   grid-auto-rows: minmax(100px, auto);
   margin-top: 2rem;
 }
+
+.old{
+  height: 150vh;
+}
 @media (max-width: 1024px) {
   .products-list {
     display: grid;
@@ -13,8 +17,17 @@
     grid-auto-rows: minmax(100px, auto);
     margin-top: 2rem;
   }
+
+  
+  .old{
+    height: 120vh;
+  }
 }
 @media (max-width: 768px) {
+
+  .old{
+    height: 170vh;
+  }
   .products-list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);

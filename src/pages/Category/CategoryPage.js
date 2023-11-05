@@ -20,7 +20,7 @@ export const CategoryPage = () => {
       querySnapshot.forEach((doc) => {
         docs.push({ ...doc.data(), id: doc.id });
       });
-      console.log(docs);
+
       setProductsData(docs);
     };
     getProducts();
@@ -28,7 +28,7 @@ export const CategoryPage = () => {
 
   return (
     <>
-      <div className="categoryPage">
+      <div className={"categoryPage" + (categoryId === "old" ? "old" : "")}>
         <ul className="products-list">
           {productsData.map((producto) => {
             return <ProductCard key={producto.id} producto={producto} />;
